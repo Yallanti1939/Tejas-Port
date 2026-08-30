@@ -1,1336 +1,1665 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
+    <!-- =====================================================
+         BASIC DOCUMENT SETTINGS
+    ====================================================== -->
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YVST</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
     >
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+
+    <meta
+        name="description"
+        content="Yallanti Venkata Sai Teja - Software Developer, Full Stack Developer, AI Engineer and Data Analyst"
     >
+
+    <meta
+        name="author"
+        content="Yallanti Venkata Sai Teja"
+    >
+
+
+    <!-- =====================================================
+         PAGE TITLE
+    ====================================================== -->
+
+    <title>
+        Yallanti Venkata Sai Teja | Portfolio
+    </title>
+
+
+    <!-- =====================================================
+         MAIN CSS
+    ====================================================== -->
+
     <link
-    rel="icon"
-    type="image/png"
-    href="assets/logo/Icon.png"
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+
+    <!-- =====================================================
+         FONT AWESOME
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         FAVICON
+    ====================================================== -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/logo/Icon.png"
     >
 
 </head>
+
+
 <body>
 
-    <!-- Header -->
+
+    <!-- =====================================================
+         HEADER / NAVBAR
+    ====================================================== -->
+
     <header class="header">
 
-    <nav class="navbar">
+        <nav
+            class="navbar"
+            aria-label="Main Navigation"
+        >
 
-        <a href="#home" class="logo">
-            <img 
-                src="assets/logo/ty-logo.png" 
-                alt="TY Logo"
-                class="logo-image"
+
+            <!-- =================================================
+                 LOGO
+            ================================================== -->
+
+            <a
+                href="#home"
+                class="logo"
+                aria-label="Go to Home"
             >
 
-            <span class="logo-text">
-                YALLANTI VENKATA SAI TEJA
-            </span>
-        </a>
+                <img
+                    src="assets/logo/ty-logo.png"
+                    alt="TY Logo"
+                    class="logo-image"
+                >
 
-        <div class="nav-links">
+                <span class="logo-text">
+                    YALLANTI VENKATA SAI TEJA
+                </span>
 
-            <a href="#home" class="nav-link active">
-                Home
             </a>
 
-            <a href="#about" class="nav-link">
-                About
-            </a>
 
-            <a href="#education" class="nav-link">
-                Education
-            </a>
+            <!-- =================================================
+                 DESKTOP NAVIGATION
+            ================================================== -->
 
-            <a href="#experience" class="nav-link">
-                Experience
-            </a>
+            <div class="nav-links" id="nav-links">
 
-            <a href="#projects" class="nav-link">
-                Projects
-            </a>
+                <a
+                    href="#home"
+                    class="nav-link active"
+                >
+                    Home
+                </a>
 
-            <a href="#contact" class="nav-link">
-                Contact
-            </a>
+                <a
+                    href="#about"
+                    class="nav-link"
+                >
+                    About
+                </a>
 
-        </div>
+                <a
+                    href="#education"
+                    class="nav-link"
+                >
+                    Education
+                </a>
 
-        <button class="theme-toggle" id="theme-toggle">
-        <span id="theme-icon">☾</span>
-        </button>
+                <a
+                    href="#experience"
+                    class="nav-link"
+                >
+                    Experience
+                </a>
 
-        <a href="#contact" class="hire-btn">
-            Hire Me
-        </a>
+                <a
+                    href="#projects"
+                    class="nav-link"
+                >
+                    Projects
+                </a>
 
-    </nav>
+                <a
+                    href="#contact"
+                    class="nav-link"
+                >
+                    Contact
+                </a>
 
-</header>
+            </div>
 
 
-    <!-- Main Content -->
+            <!-- =================================================
+                 NAVBAR ACTIONS
+            ================================================== -->
+
+            <div class="navbar-actions">
+
+                <!-- DARK / LIGHT MODE -->
+                <button
+                    type="button"
+                    class="theme-toggle"
+                    id="theme-toggle"
+                    aria-label="Toggle dark and light mode"
+                    title="Toggle dark / light mode"
+                >
+                    <span id="theme-icon">☾</span>
+                </button>
+
+                <!-- HIRE ME -->
+                <a
+                    href="#contact"
+                    class="hire-btn"
+                >
+                    Hire Me
+                </a>
+
+                <!-- MOBILE MENU -->
+                <button
+                    type="button"
+                    class="mobile-menu-btn"
+                    id="mobile-menu-btn"
+                    aria-label="Open navigation menu"
+                    aria-expanded="false"
+                    aria-controls="nav-links"
+                >
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
     <main>
 
-        <!-- Hero -->
-        <section id="home" class="hero">
 
-        <div class="hero-container">
+        <!-- =================================================
+             HERO SECTION
+        ================================================== -->
 
-            <div class="hero-content">
+        <section
+            id="home"
+            class="hero"
+        >
 
-                <span class="hero-greeting">
-                    Hello, I'm
-                </span>
-
-                <h1 class="hero-title">
-                    YALLANTI
-                    <span>VENKATA SAI TEJA</span>
-                </h1>
-
-                <h2 class="hero-role">
-                    Software Developer
-                    <span>•</span>
-                    Full Stack Developer
-                    <span>•</span>
-                    AI Engineer
-                    <span>•</span>
-                    Data Analyst
-                </h2>
-
-                <p class="hero-description">
-                    I build scalable full-stack applications,
-                    AI-powered solutions, and data-driven products
-                    using modern technologies.
-                </p>
-
-                <div class="hero-buttons">
-
-                    <a
-                        href="assets/resume/resume.pdf"
-                        class="btn btn-primary"
-                        target="_blank"
-                    >
-                        Download Resume
-                    </a>
-
-                    <a
-                        href="#contact"
-                        class="btn btn-secondary"
-                    >
-                        Contact Me
-                    </a>
-
-                </div>
-
-                <div class="hero-socials">
-
-                <a
-                    href="https://github.com/Yallanti1939"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-icon"
-                    aria-label="GitHub"
-                >
-                    <i class="fa-brands fa-github"></i>
-                </a>
-
-                <a
-                    href="https://www.linkedin.com/in/yallanti1939/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="social-icon"
-                    aria-label="LinkedIn"
-                >
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-
-                <a
-                    href="mailto:venkatasai.yallanti@gmail.com"
-                    class="social-icon"
-                    aria-label="Email"
-                >
-                    <i class="fa-solid fa-envelope"></i>
-                </a>
-
-            </div>
-
-            </div>
+            <div class="hero-container">
 
 
-            <div class="hero-visual">
+                <!-- =============================================
+                     HERO CONTENT
+                ============================================== -->
 
-                <div class="hero-image-background"></div>
-
-                <div class="hero-image-wrapper">
-
-                    <img
-                        src="assets/images/profile.png"
-                        alt="Yallanti Venkata Sai Teja"
-                        class="hero-image"
-                    >
-
-                </div>
-
-            </div>
-        </section>
+                <div class="hero-content">
 
 
-        <!-- About -->
-        <section id="about" class="about">
+                    <!-- Greeting -->
 
-        <div class="about-container">
-
-            <!-- SECTION HEADER -->
-            <div class="section-header">
-
-                <span class="section-label">
-                    About Me
-                </span>
-
-                <h2 class="section-title">
-                    Turning ideas into
-                    <span>digital solutions.</span>
-                </h2>
-
-                <p class="section-subtitle">
-                    A developer focused on building modern,
-                    scalable and intelligent applications.
-                </p>
-
-            </div>
+                    <span class="hero-greeting">
+                        Hello, I'm
+                    </span>
 
 
-            <!-- ABOUT CONTENT -->
-            <div class="about-content">
+                    <!-- Main Heading -->
 
-                <div class="about-text">
+                    <h1 class="hero-title">
 
-                    <p>
-                        I'm <strong>Yallanti Venkata Sai Teja</strong>,
-                        a Software Developer, Full Stack Developer,
-                        AI Engineer and Data Analyst passionate about
-                        creating practical technology solutions.
+                        YALLANTI
+
+                        <span>
+                            VENKATA SAI TEJA
+                        </span>
+
+                    </h1>
+
+
+                    <!-- Roles -->
+
+                    <h2 class="hero-role">
+
+                        Software Developer
+
+                        <span>•</span>
+
+                        Full Stack Developer
+
+                        <span>•</span>
+
+                        AI Engineer
+
+                        <span>•</span>
+
+                        Data Analyst
+
+                    </h2>
+
+
+                    <!-- Description -->
+
+                    <p class="hero-description">
+
+                        I build scalable full-stack applications,
+                        AI-powered solutions, and data-driven products
+                        using modern technologies.
+
                     </p>
 
-                    <p>
-                        I enjoy working across the complete development
-                        lifecycle — from designing responsive interfaces
-                        and building backend systems to integrating
-                        AI and analyzing data.
-                    </p>
 
-                    <p>
-                        My goal is to build products that are not only
-                        visually clean, but also scalable, reliable
-                        and useful to real users.
-                    </p>
+                    <!-- =========================================
+                         HERO BUTTONS
+                    ========================================== -->
 
-                </div>
+                    <div class="hero-buttons">
 
 
-                <!-- EXPERTISE CARDS -->
-                <div class="about-cards">
+                        <!-- Resume -->
 
-                    <div class="about-card">
+                        <a
+                            href="assets/resume/resume.pdf"
+                            class="btn btn-primary"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
 
-                        <div class="about-card-icon">
-                            &lt;/&gt;
-                        </div>
+                            Download Resume
 
-                        <h3>
-                            Full Stack
-                        </h3>
+                        </a>
 
-                        <p>
-                            Modern web applications from frontend
-                            to backend and database.
-                        </p>
+
+                        <!-- Contact -->
+
+                        <a
+                            href="#contact"
+                            class="btn btn-secondary"
+                        >
+
+                            Contact Me
+
+                        </a>
 
                     </div>
 
 
-                    <div class="about-card">
+                    <!-- =========================================
+                         HERO SOCIAL ICONS
+                    ========================================== -->
 
-                        <div class="about-card-icon">
-                            AI
-                        </div>
+                    <div class="hero-socials">
 
-                        <h3>
-                            AI Engineering
-                        </h3>
 
-                        <p>
-                            AI-powered applications using modern
-                            LLM and machine learning technologies.
-                        </p>
+                        <!-- GitHub -->
+
+                        <a
+                            href="https://github.com/Yallanti1939"
+                            class="social-icon"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub"
+                        >
+
+                            <i class="fa-brands fa-github"></i>
+
+                        </a>
+
+
+                        <!-- LinkedIn -->
+
+                        <a
+                            href="https://www.linkedin.com/in/yallanti1939/"
+                            class="social-icon"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn"
+                        >
+
+                            <i class="fa-brands fa-linkedin-in"></i>
+
+                        </a>
+
+
+                        <!-- Email -->
+
+                        <a
+                            href="mailto:venkatasai.yallanti@gmail.com"
+                            class="social-icon"
+                            aria-label="Email"
+                        >
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                        </a>
 
                     </div>
 
+                </div>
 
-                    <div class="about-card">
 
-                        <div class="about-card-icon">
-                            ∑
-                        </div>
 
-                        <h3>
-                            Data Analytics
-                        </h3>
+                <!-- =============================================
+                     HERO IMAGE
+                ============================================== -->
 
-                        <p>
-                            Transforming raw data into meaningful
-                            insights and decisions.
-                        </p>
+                <div class="hero-visual">
+
+
+                    <!-- Circular Background -->
+
+                    <div class="hero-image-background"></div>
+
+
+                    <!-- Image Wrapper -->
+
+                    <div class="hero-image-wrapper">
+
+                        <img
+                            src="assets/images/profile.png"
+                            alt="Yallanti Venkata Sai Teja"
+                            class="hero-image"
+                        >
 
                     </div>
 
                 </div>
 
             </div>
-
-        </div>
 
         </section>
 
-
-        <!-- Education -->
-        <section id="education" class="education">
-
-        <div class="education-container">
-
-        <!-- SECTION HEADER -->
-        <div class="section-header">
-
-            <span class="section-label">
-                Education
-            </span>
-
-            <h2 class="section-title">
-                My academic
-                <span>journey.</span>
-            </h2>
-
-            <p class="section-subtitle">
-                The academic foundation that shaped my
-                technical knowledge and problem-solving skills.
-            </p>
-
-        </div>
-
-
-        <!-- EDUCATION TIMELINE -->
-        <div class="education-timeline">
-
-
-            <!-- B.TECH -->
-            <div class="education-item">
-
-                <div class="education-year">
-                    2022 — 2026
-                </div>
-
-                <div class="education-dot"></div>
-
-                <div class="education-card">
-
-                    <div class="education-card-top">
-
-                        <span class="education-level">
-                            B.Tech
-                        </span>
-
-                        <span class="education-score">
-                            74%
-                        </span>
-
-                    </div>
-
-                    <h3>
-                        Computer Science and Engineering
-                        <span>(Artificial Intelligence)</span>
-                    </h3>
-
-                    <p class="education-institute">
-                        Audisankara College of Engineering
-                        and Technology
-                    </p>
-
-                    <p class="education-location">
-                        Gudur, Andhra Pradesh
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- INTERMEDIATE -->
-            <div class="education-item">
-
-                <div class="education-year">
-                    2020 — 2022
-                </div>
-
-                <div class="education-dot"></div>
-
-                <div class="education-card">
-
-                    <div class="education-card-top">
-
-                        <span class="education-level">
-                            Intermediate
-                        </span>
-
-                        <span class="education-score">
-                            78%
-                        </span>
-
-                    </div>
-
-                    <h3>
-                        Mathematics, Physics &
-                        Chemistry <span>(MPC)</span>
-                    </h3>
-
-                    <p class="education-institute">
-                        Sri Raghavendra Junior College
-                    </p>
-
-                    <p class="education-location">
-                        Atmakur, Andhra Pradesh
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- SSC -->
-            <div class="education-item">
-
-                <div class="education-year">
-                    2019 — 2020
-                </div>
-
-                <div class="education-dot"></div>
-
-                <div class="education-card">
-
-                    <div class="education-card-top">
-
-                        <span class="education-level">
-                            SSC
-                        </span>
-
-                        <span class="education-score">
-                            80%
-                        </span>
-
-                    </div>
-
-                    <h3>
-                        Secondary School Certificate
-                    </h3>
-
-                    <p class="education-institute">
-                        GBKR ZPP High School
-                    </p>
-
-                    <p class="education-location">
-                        Sangam, Andhra Pradesh
-                    </p>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </div>
-
-        </section>
-
-
-        <!-- Experience -->
-        <section id="experience" class="experience">
-
-    <div class="experience-container">
-
-        <!-- SECTION HEADER -->
-        <div class="section-header">
-
-            <span class="section-label">
-                Experience
-            </span>
-
-            <h2 class="section-title">
-                Where I've
-                <span>worked.</span>
-            </h2>
-
-            <p class="section-subtitle">
-                Practical experience building software,
-                analyzing data and working with modern technologies.
-            </p>
-
-        </div>
-
-
-        <!-- EXPERIENCE CARDS -->
-        <div class="experience-grid">
-
-
-            <!-- EXPERIENCE 1 -->
-            <article class="experience-card">
-
-                <div class="experience-card-header">
-
-                    <div>
-
-                        <span class="experience-role">
-                            Java Full Stack Intern
-                        </span>
-
-                        <h3>
-                            iGenuine Learning
-                        </h3>
-
-                    </div>
-
-                    <span class="experience-type">
-                        Remote
-                    </span>
-
-                </div>
-
-
-                <div class="experience-meta">
-
-                    <span>
-                        June 2025 — May 2026
-                    </span>
-
-                    <span>
-                        9 Months
-                    </span>
-
-                </div>
-
-
-                <p class="experience-location">
-                    Coimbatore, Tamil Nadu, India
-                </p>
-
-
-                <p class="experience-description">
-                    Worked on full-stack application development,
-                    contributing to frontend interfaces, backend
-                    services and database-driven application features.
-                </p>
-
-
-                <div class="experience-tags">
-
-                    <span>Java</span>
-                    <span>Spring Boot</span>
-                    <span>React</span>
-                    <span>SQL</span>
-                    <span>HTML</span>
-                    <span>CSS</span>
-
-                </div>
-
-            </article>
-
-
-            <!-- EXPERIENCE 2 -->
-            <article class="experience-card">
-
-                <div class="experience-card-header">
-
-                    <div>
-
-                        <span class="experience-role">
-                            Data Analyst Intern
-                        </span>
-
-                        <h3>
-                            iStudio
-                        </h3>
-
-                    </div>
-
-                    <span class="experience-type">
-                        Remote
-                    </span>
-
-                </div>
-
-
-                <div class="experience-meta">
-
-                    <span>
-                        May 2026 — July 2026
-                    </span>
-
-                    <span>
-                        3 Months
-                    </span>
-
-                </div>
-
-
-                <p class="experience-location">
-                    Pune, Maharashtra, India
-                </p>
-
-
-                <p class="experience-description">
-                    Worked with data analysis and reporting workflows,
-                    transforming datasets into meaningful insights
-                    using programming and analytical tools.
-                </p>
-
-
-                <div class="experience-tags">
-
-                    <span>Python</span>
-                    <span>SQL</span>
-                    <span>Pandas</span>
-                    <span>Excel</span>
-                    <span>NumPy</span>
-                    <span>Pandas</span>
-                    <span>Power BI</span>
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-    </div>
-
-        </section>
-
-
-
-        <!-- Projects -->
-        <section id="projects" class="projects">
-
-    <div class="projects-container">
-
-        <!-- SECTION HEADER -->
-        <div class="section-header">
-
-            <span class="section-label">
-                Projects
-            </span>
-
-            <h2 class="section-title">
-                Things I've
-                <span>built.</span>
-            </h2>
-
-            <p class="section-subtitle">
-                A selection of projects across full-stack development,
-                artificial intelligence and data analytics.
-            </p>
-
-        </div>
 
 
         <!-- =================================================
-             FULL STACK PROJECTS
+             ABOUT SECTION
         ================================================== -->
 
-        <div class="project-category">
+        <section
+            id="about"
+            class="about"
+        >
 
-            <div class="project-category-header">
+            <div class="about-container">
 
-                <div>
 
-                    <span class="project-category-number">
-                        01
+                <!-- =============================================
+                     SECTION HEADER
+                ============================================== -->
+
+                <div class="section-header">
+
+                    <span class="section-label">
+                        About Me
                     </span>
 
-                    <h3>
-                        Full Stack Development
-                    </h3>
+                    <h2 class="section-title">
+
+                        Turning ideas into
+
+                        <span>
+                            digital solutions.
+                        </span>
+
+                    </h2>
+
+                    <p class="section-subtitle">
+
+                        A developer focused on building modern,
+                        scalable and intelligent applications.
+
+                    </p>
 
                 </div>
 
-                <p>
-                    Scalable applications and
-                    product-focused solutions.
-                </p>
-
-            </div>
 
 
-            <div class="projects-grid">
+                <!-- =============================================
+                     ABOUT CONTENT
+                ============================================== -->
+
+                <div class="about-content">
 
 
-                <!-- CAFEFLOW -->
-                <article class="project-card">
+                    <!-- About Text -->
 
-                    <div class="project-image">
+                    <div class="about-text">
 
-                        <img
-                            src="assets/images/cafeflow.png"
-                            alt="CafeFlow project"
-                        >
+                        <p>
 
-                        <span class="project-number">
-                            01
-                        </span>
+                            I'm
+                            <strong>
+                                Yallanti Venkata Sai Teja
+                            </strong>,
+
+                            a Software Developer, Full Stack Developer,
+                            AI Engineer and Data Analyst passionate about
+                            creating practical technology solutions.
+
+                        </p>
+
+
+                        <p>
+
+                            I enjoy working across the complete development
+                            lifecycle — from designing responsive interfaces
+                            and building backend systems to integrating
+                            AI and analyzing data.
+
+                        </p>
+
+
+                        <p>
+
+                            My goal is to build products that are not only
+                            visually clean, but also scalable, reliable
+                            and useful to real users.
+
+                        </p>
 
                     </div>
 
 
-                    <div class="project-content">
 
-                        <div class="project-top">
+                    <!-- =========================================
+                         EXPERTISE CARDS
+                    ========================================== -->
 
-                            <span class="project-type">
+                    <div class="about-cards">
+
+
+                        <!-- Full Stack -->
+
+                        <article class="about-card">
+
+                            <div class="about-card-icon">
+                                &lt;/&gt;
+                            </div>
+
+                            <h3>
                                 Full Stack
-                            </span>
+                            </h3>
 
-                        </div>
+                            <p>
 
+                                Modern web applications from frontend
+                                to backend and database.
 
-                        <h4>
-                            CafeFlow
-                        </h4>
+                            </p>
 
+                        </article>
 
-                        <p>
-                            A cafe order and billing system
-                            with real-time order status tracking
-                            designed to streamline cafe operations.
-                        </p>
 
+                        <!-- AI -->
 
-                        <div class="project-tech">
+                        <article class="about-card">
 
-                            <span>React</span>
-                            <span>Vite</span>
-                            <span>TypeScript</span>
-                            <span>Spring Boot</span>
-                            <span>PostgreSQL</span>
-                            <span>Docker</span>
+                            <div class="about-card-icon">
+                                AI
+                            </div>
 
-                        </div>
+                            <h3>
+                                AI Engineering
+                            </h3>
 
+                            <p>
 
-                        <div class="project-actions">
+                                AI-powered applications using modern
+                                LLM and machine learning technologies.
 
-                            <a
-                                href="https://github.com/Yallanti1939/CafeFlow"
-                                class="project-link"
-                                target="_blank"
-                            >
-                                GitHub Link
-                                <span>↗</span>
-                            </a>
+                            </p>
 
-                        </div>
+                        </article>
 
-                    </div>
 
-                </article>
+                        <!-- Data -->
 
+                        <article class="about-card">
 
-                <!-- PLACEMENT PLATFORM -->
-                <article class="project-card">
+                            <div class="about-card-icon">
+                                ∑
+                            </div>
 
-                    <div class="project-image">
-
-                        <img
-                            src="assets/images/placement-platform.png"
-                            alt="Smart Placement Preparation Platform"
-                        >
-
-                        <span class="project-number">
-                            02
-                        </span>
-
-                    </div>
-
-
-                    <div class="project-content">
-
-                        <div class="project-top">
-
-                            <span class="project-type">
-                                SaaS / Full Stack
-                            </span>
-
-                        </div>
-
-
-                        <h4>
-                            Smart Placement Preparation Platform
-                        </h4>
-
-
-                        <p>
-                            A comprehensive SaaS platform for
-                            interview preparation featuring coding
-                            practice, ATS resume scoring, aptitude
-                            tests, mock interviews, job matching
-                            and an AI assistant.
-                        </p>
-
-
-                        <div class="project-tech">
-
-                            <span>Python</span>
-                            <span>FastAPI</span>
-                            <span>React</span>
-                            <span>Vite</span>
-                            <span>Firebase</span>
-                            <span>Supabase</span>
-                            <span>Gemini AI</span>
-
-                        </div>
-
-
-                        <div class="project-actions">
-
-                            <a
-                                href="https://github.com/Yallanti1939/PlacementGPT"
-                                class="project-link"
-                                target="_blank"
-                            >
-                                GitHub Link
-                                <span>↗</span>
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-            </div>
-
-        </div>
-
-
-        <!-- =================================================
-             AI PROJECTS
-        ================================================== -->
-
-        <div class="project-category">
-
-            <div class="project-category-header">
-
-                <div>
-
-                    <span class="project-category-number">
-                        02
-                    </span>
-
-                    <h3>
-                        Artificial Intelligence
-                    </h3>
-
-                </div>
-
-                <p>
-                    Intelligent systems powered by
-                    AI and machine learning.
-                </p>
-
-            </div>
-
-
-            <div class="projects-grid">
-
-
-                <!-- RAG -->
-                <article class="project-card">
-
-                    <div class="project-image">
-
-                        <img
-                            src="assets/images/rag.jpg"
-                            alt="Enterprise RAG Knowledge Base"
-                        >
-
-                        <span class="project-number">
-                            03
-                        </span>
-
-                    </div>
-
-
-                    <div class="project-content">
-
-                        <div class="project-top">
-
-                            <span class="project-type">
-                                AI / RAG
-                            </span>
-
-                        </div>
-
-
-                        <h4>
-                            Enterprise RAG Knowledge Base
-                        </h4>
-
-
-                        <p>
-                            An intelligent document-based
-                            question-answering system that allows
-                            users to upload documents and retrieve
-                            relevant answers using RAG.
-                        </p>
-
-
-                        <div class="project-tech">
-
-                            <span>Python</span>
-                            <span>FastAPI</span>
-                            <span>React</span>
-                            <span>SQLite</span>
-                            <span>PostgreSQL</span>
-                            <span>ChromaDB</span>
-                            <span>Gemini API</span>
-                            <span>Docker</span>
-
-                        </div>
-
-
-                        <div class="project-actions">
-
-                            <a
-                                href="https://github.com/Yallanti1939/Enterprise-RAG-Knowledge-Base"
-                                class="project-link"
-                                target="_blank"
-                            >
-                                GitHub Link
-                                <span>↗</span>
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- SENTIMENT -->
-                <article class="project-card">
-
-                    <div class="project-image">
-
-                        <img
-                            src="assets/images/sentiment.jpg"
-                            alt="AI Powered Sentiment Analysis System"
-                        >
-
-                        <span class="project-number">
-                            04
-                        </span>
-
-                    </div>
-
-
-                    <div class="project-content">
-
-                        <div class="project-top">
-
-                            <span class="project-type">
-                                Machine Learning
-                            </span>
-
-                        </div>
-
-
-                        <h4>
-                            AI-Powered Sentiment Analysis System
-                        </h4>
-
-
-                        <p>
-                            A machine learning system that analyzes
-                            user feedback and predicts sentiment using
-                            natural language processing and supervised
-                            classification techniques.
-                        </p>
-
-
-                        <div class="project-tech">
-
-                            <span>Python</span>
-                            <span>Pandas</span>
-                            <span>NLTK</span>
-                            <span>Scikit-learn</span>
-                            <span>TF-IDF</span>
-                            <span>Logistic Regression</span>
-                            <span>SVM</span>
-                            <span>Streamlit</span>
-
-                        </div>
-
-
-                        <div class="project-actions">
-
-                            <a
-                                href="https://github.com/Yallanti1939/AI-Powered-Sentiment-Analysis-System"
-                                class="project-link"
-                                target="_blank"
-                            >
-                                GitHub Link
-                                <span>↗</span>
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-            </div>
-
-        </div>
-
-
-        <!-- =================================================
-             DATA ANALYTICS PROJECTS
-        ================================================== -->
-
-        <div class="project-category">
-
-            <div class="project-category-header">
-
-                <div>
-
-                    <span class="project-category-number">
-                        03
-                    </span>
-
-                    <h3>
-                        Data Analytics
-                    </h3>
-
-                </div>
-
-                <p>
-                    Turning data into meaningful
-                    insights and decisions.
-                </p>
-
-            </div>
-
-
-            <div class="projects-grid">
-
-
-                <!-- RETAIL -->
-                <article class="project-card">
-
-                    <div class="project-image">
-
-                        <img
-                            src="assets/images/retail-analysis.png"
-                            alt="Retail Sales Analysis"
-                        >
-
-                        <span class="project-number">
-                            05
-                        </span>
-
-                    </div>
-
-
-                    <div class="project-content">
-
-                        <div class="project-top">
-
-                            <span class="project-type">
+                            <h3>
                                 Data Analytics
+                            </h3>
+
+                            <p>
+
+                                Transforming raw data into meaningful
+                                insights and decisions.
+
+                            </p>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             EDUCATION SECTION
+        ================================================== -->
+
+        <section
+            id="education"
+            class="education"
+        >
+
+            <div class="education-container">
+
+
+                <!-- =============================================
+                     SECTION HEADER
+                ============================================== -->
+
+                <div class="section-header">
+
+                    <span class="section-label">
+                        Education
+                    </span>
+
+                    <h2 class="section-title">
+
+                        My academic
+
+                        <span>
+                            journey.
+                        </span>
+
+                    </h2>
+
+                    <p class="section-subtitle">
+
+                        The academic foundation that shaped my
+                        technical knowledge and problem-solving skills.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- =============================================
+                     EDUCATION TIMELINE
+                ============================================== -->
+
+                <div class="education-timeline">
+
+
+                    <!-- =========================================
+                         B.TECH
+                    ========================================== -->
+
+                    <article class="education-item">
+
+                        <div class="education-year">
+                            2022 — 2026
+                        </div>
+
+                        <div class="education-dot"></div>
+
+                        <div class="education-card">
+
+                            <div class="education-card-top">
+
+                                <span class="education-level">
+                                    B.Tech
+                                </span>
+
+                                <span class="education-score">
+                                    74%
+                                </span>
+
+                            </div>
+
+                            <h3>
+
+                                Computer Science and Engineering
+
+                                <span>
+                                    (Artificial Intelligence)
+                                </span>
+
+                            </h3>
+
+                            <p class="education-institute">
+
+                                Audisankara College of Engineering
+                                and Technology
+
+                            </p>
+
+                            <p class="education-location">
+
+                                Gudur, Andhra Pradesh
+
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =========================================
+                         INTERMEDIATE
+                    ========================================== -->
+
+                    <article class="education-item">
+
+                        <div class="education-year">
+                            2020 — 2022
+                        </div>
+
+                        <div class="education-dot"></div>
+
+                        <div class="education-card">
+
+                            <div class="education-card-top">
+
+                                <span class="education-level">
+                                    Intermediate
+                                </span>
+
+                                <span class="education-score">
+                                    78%
+                                </span>
+
+                            </div>
+
+                            <h3>
+
+                                Mathematics, Physics & Chemistry
+
+                                <span>
+                                    (MPC)
+                                </span>
+
+                            </h3>
+
+                            <p class="education-institute">
+
+                                Sri Raghavendra Junior College
+
+                            </p>
+
+                            <p class="education-location">
+
+                                Atmakur, Andhra Pradesh
+
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =========================================
+                         SSC
+                    ========================================== -->
+
+                    <article class="education-item">
+
+                        <div class="education-year">
+                            2019 — 2020
+                        </div>
+
+                        <div class="education-dot"></div>
+
+                        <div class="education-card">
+
+                            <div class="education-card-top">
+
+                                <span class="education-level">
+                                    SSC
+                                </span>
+
+                                <span class="education-score">
+                                    80%
+                                </span>
+
+                            </div>
+
+                            <h3>
+                                Secondary School Certificate
+                            </h3>
+
+                            <p class="education-institute">
+
+                                GBKR ZPP High School
+
+                            </p>
+
+                            <p class="education-location">
+
+                                Sangam, Andhra Pradesh
+
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             EXPERIENCE SECTION
+        ================================================== -->
+
+        <section
+            id="experience"
+            class="experience"
+        >
+
+            <div class="experience-container">
+
+
+                <!-- =============================================
+                     SECTION HEADER
+                ============================================== -->
+
+                <div class="section-header">
+
+                    <span class="section-label">
+                        Experience
+                    </span>
+
+                    <h2 class="section-title">
+
+                        Where I've
+
+                        <span>
+                            worked.
+                        </span>
+
+                    </h2>
+
+                    <p class="section-subtitle">
+
+                        Practical experience building software,
+                        analyzing data and working with modern
+                        technologies.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- =============================================
+                     EXPERIENCE CARDS
+                ============================================== -->
+
+                <div class="experience-grid">
+
+
+                    <!-- =========================================
+                         EXPERIENCE 1
+                    ========================================== -->
+
+                    <article class="experience-card">
+
+                        <div class="experience-card-header">
+
+                            <div>
+
+                                <span class="experience-role">
+                                    Java Full Stack Intern
+                                </span>
+
+                                <h3>
+                                    iGenuine Learning
+                                </h3>
+
+                            </div>
+
+                            <span class="experience-type">
+                                Remote
                             </span>
 
                         </div>
 
 
-                        <h4>
-                            Retail Sales Analysis & Reporting
-                        </h4>
+                        <div class="experience-meta">
+
+                            <span>
+                                June 2025 — May 2026
+                            </span>
+
+                            <span>
+                                9 Months
+                            </span>
+
+                        </div>
 
 
-                        <p>
-                            An analytical reporting solution for a
-                            retail chain that explores sales data,
-                            identifies trends and presents actionable
-                            business insights.
+                        <p class="experience-location">
+
+                            Coimbatore, Tamil Nadu, India
+
                         </p>
 
 
-                        <div class="project-tech">
+                        <p class="experience-description">
+
+                            Worked on full-stack application development,
+                            contributing to frontend interfaces, backend
+                            services and database-driven application features.
+
+                        </p>
+
+
+                        <div class="experience-tags">
+
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>React</span>
+                            <span>SQL</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =========================================
+                         EXPERIENCE 2
+                    ========================================== -->
+
+                    <article class="experience-card">
+
+                        <div class="experience-card-header">
+
+                            <div>
+
+                                <span class="experience-role">
+                                    Data Analyst Intern
+                                </span>
+
+                                <h3>
+                                    iStudio
+                                </h3>
+
+                            </div>
+
+                            <span class="experience-type">
+                                Remote
+                            </span>
+
+                        </div>
+
+
+                        <div class="experience-meta">
+
+                            <span>
+                                May 2026 — July 2026
+                            </span>
+
+                            <span>
+                                3 Months
+                            </span>
+
+                        </div>
+
+
+                        <p class="experience-location">
+
+                            Pune, Maharashtra, India
+
+                        </p>
+
+
+                        <p class="experience-description">
+
+                            Worked with data analysis and reporting workflows,
+                            transforming datasets into meaningful insights
+                            using programming and analytical tools.
+
+                        </p>
+
+
+                        <div class="experience-tags">
 
                             <span>Python</span>
                             <span>SQL</span>
-                            <span>MySQL</span>
-                            <span>Excel</span>
-                            <span>Streamlit</span>
-                            <span>Jupyter</span>
-
-                        </div>
-
-
-                        <div class="project-actions">
-
-                            <a
-                                href="https://github.com/Yallanti1939/Retail-Sales-Data-Analysis"
-                                class="project-link"
-                                target="_blank"
-                            >
-                                GitHub Link
-                                <span>↗</span>
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- ECOMMERCE -->
-                <article class="project-card">
-
-                    <div class="project-image">
-
-                        <img
-                            src="assets/images/ecommerce.jpg"
-                            alt="Indian Ecommerce Analysis"
-                        >
-
-                        <span class="project-number">
-                            06
-                        </span>
-
-                    </div>
-
-
-                    <div class="project-content">
-
-                        <div class="project-top">
-
-                            <span class="project-type">
-                                Data Science
-                            </span>
-
-                        </div>
-
-
-                        <h4>
-                            Indian E-Commerce Analysis
-                        </h4>
-
-
-                        <p>
-                            An exploratory analysis of Indian
-                            e-commerce data to identify patterns,
-                            trends and useful insights using
-                            statistical and machine learning tools.
-                        </p>
-
-
-                        <div class="project-tech">
-
-                            <span>Python</span>
                             <span>Pandas</span>
+                            <span>Excel</span>
                             <span>NumPy</span>
-                            <span>Matplotlib</span>
-                            <span>Scikit-learn</span>
-                            <span>Statsmodels</span>
+                            <span>Power BI</span>
 
                         </div>
 
+                    </article>
 
-                        <div class="project-actions">
-
-                            <a
-                                href="https://github.com/Yallanti1939/Indian-Ecommerce-Analysis"
-                                class="project-link"
-                                target="_blank"
-                            >
-                                GitHub Link
-                                <span>↗</span>
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                </article>
-
+                </div>
 
             </div>
-
-        </div>
-
-    </div>
 
         </section>
 
 
-        <!-- Contact -->
-        <section id="contact" class="contact">
 
-    <div class="contact-container">
+        <!-- =================================================
+             PROJECTS SECTION
+        ================================================== -->
 
-        <!-- SECTION HEADER -->
-        <div class="section-header">
+        <section
+            id="projects"
+            class="projects"
+        >
 
-            <span class="section-label">
-                Contact
-            </span>
-
-            <h2 class="section-title">
-                Let's build
-                <span>something.</span>
-            </h2>
-
-            <p class="section-subtitle">
-                Have an idea, opportunity or project in mind?
-                I'd love to hear from you.
-            </p>
-
-        </div>
+            <div class="projects-container">
 
 
-        <!-- CONTACT CONTENT -->
-        <div class="contact-content">
+                <!-- =============================================
+                     SECTION HEADER
+                ============================================== -->
 
+                <div class="section-header">
 
-            <!-- CONTACT INFORMATION -->
-            <div class="contact-info">
+                    <span class="section-label">
+                        Projects
+                    </span>
 
-                <span class="contact-small-title">
-                    GET IN TOUCH
-                </span>
+                    <h2 class="section-title">
 
-                <h3>
-                    Let's start a
-                    <span>conversation.</span>
-                </h3>
-
-                <p class="contact-description">
-                    Whether you have a project idea, a job opportunity,
-                    or simply want to connect, feel free to reach out.
-                </p>
-
-
-                <!-- EMAIL -->
-                <a
-                    href="mailto:venkatasai.yallanti@gmail.com"
-                    class="contact-item"
-                >
-
-                    <div class="contact-icon">
-                        ✉
-                    </div>
-
-                    <div>
+                        Things I've
 
                         <span>
-                            Email
+                            built.
                         </span>
 
-                        <strong>
-                            venkatasai.yallanti@gmail.com
-                        </strong>
+                    </h2>
+
+                    <p class="section-subtitle">
+
+                        A selection of projects across full-stack
+                        development, artificial intelligence and
+                        data analytics.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     CATEGORY 01 — FULL STACK
+                ================================================== -->
+
+                <div class="project-category">
+
+
+                    <!-- Category Header -->
+
+                    <div class="project-category-header">
+
+                        <div>
+
+                            <span class="project-category-number">
+                                01
+                            </span>
+
+                            <h3>
+                                Full Stack Development
+                            </h3>
+
+                        </div>
+
+                        <p>
+
+                            Scalable applications and
+                            product-focused solutions.
+
+                        </p>
 
                     </div>
 
-                </a>
 
 
-                <!-- MOBILE -->
-                <a
-                    href="tel:+919110399191"
-                    class="contact-item"
-                >
+                    <!-- Projects Grid -->
 
-                    <div class="contact-icon">
-                        ☎
-                    </div>
-
-                    <div>
-
-                        <span>
-                            Phone
-                        </span>
-
-                        <strong>
-                            +91 91103 99191
-                        </strong>
-
-                    </div>
-
-                </a>
+                    <div class="projects-grid">
 
 
-                <!-- LOCATION -->
-                <div class="contact-item">
+                        <!-- =========================================
+                             CAFEFLOW
+                        ========================================== -->
 
-                    <div class="contact-icon">
-                        ⌖
-                    </div>
+                        <article class="project-card">
 
-                    <div>
+                            <div class="project-image">
 
-                        <span>
-                            Current Location
-                        </span>
+                                <img
+                                    src="assets/images/cafeflow.png"
+                                    alt="CafeFlow project"
+                                    loading="lazy"
+                                >
 
-                        <strong>
-                            Hyderabad, Telangana, India
-                        </strong>
+                                <span class="project-number">
+                                    01
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-content">
+
+                                <div class="project-top">
+
+                                    <span class="project-type">
+                                        Full Stack
+                                    </span>
+
+                                </div>
+
+
+                                <h4>
+                                    CafeFlow
+                                </h4>
+
+
+                                <p>
+
+                                    A cafe order and billing system
+                                    with real-time order status tracking
+                                    designed to streamline cafe operations.
+
+                                </p>
+
+
+                                <div class="project-tech">
+
+                                    <span>React</span>
+                                    <span>Vite</span>
+                                    <span>TypeScript</span>
+                                    <span>Spring Boot</span>
+                                    <span>PostgreSQL</span>
+                                    <span>Docker</span>
+
+                                </div>
+
+
+                                <div class="project-actions">
+
+                                    <a
+                                        href="https://github.com/Yallanti1939/CafeFlow"
+                                        class="project-link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+
+                                        GitHub Link
+
+                                        <span>
+                                            ↗
+                                        </span>
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- =========================================
+                             PLACEMENT PLATFORM
+                        ========================================== -->
+
+                        <article class="project-card">
+
+                            <div class="project-image">
+
+                                <img
+                                    src="assets/images/placement-platform.png"
+                                    alt="Smart Placement Preparation Platform"
+                                    loading="lazy"
+                                >
+
+                                <span class="project-number">
+                                    02
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-content">
+
+                                <div class="project-top">
+
+                                    <span class="project-type">
+                                        SaaS / Full Stack
+                                    </span>
+
+                                </div>
+
+
+                                <h4>
+                                    Smart Placement Preparation Platform
+                                </h4>
+
+
+                                <p>
+
+                                    A comprehensive SaaS platform for
+                                    interview preparation featuring coding
+                                    practice, ATS resume scoring, aptitude
+                                    tests, mock interviews, job matching
+                                    and an AI assistant.
+
+                                </p>
+
+
+                                <div class="project-tech">
+
+                                    <span>Python</span>
+                                    <span>FastAPI</span>
+                                    <span>React</span>
+                                    <span>Vite</span>
+                                    <span>Firebase</span>
+                                    <span>Supabase</span>
+                                    <span>Gemini AI</span>
+
+                                </div>
+
+
+                                <div class="project-actions">
+
+                                    <a
+                                        href="https://github.com/Yallanti1939/PlacementGPT"
+                                        class="project-link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+
+                                        GitHub Link
+
+                                        <span>
+                                            ↗
+                                        </span>
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
 
                     </div>
 
                 </div>
 
 
-                <!-- PERMANENT LOCATION -->
-                <div class="contact-item">
 
-                    <div class="contact-icon">
-                        ◉
+                <!-- =================================================
+                     CATEGORY 02 — AI
+                ================================================== -->
+
+                <div class="project-category">
+
+
+                    <!-- Category Header -->
+
+                    <div class="project-category-header">
+
+                        <div>
+
+                            <span class="project-category-number">
+                                02
+                            </span>
+
+                            <h3>
+                                Artificial Intelligence
+                            </h3>
+
+                        </div>
+
+                        <p>
+
+                            Intelligent systems powered by
+                            AI and machine learning.
+
+                        </p>
+
                     </div>
 
-                    <div>
 
-                        <span>
-                            Permanent Location
-                        </span>
 
-                        <strong>
-                            Nellore, Andhra Pradesh, India
-                        </strong>
+                    <!-- Projects Grid -->
+
+                    <div class="projects-grid">
+
+
+                        <!-- =========================================
+                             RAG
+                        ========================================== -->
+
+                        <article class="project-card">
+
+                            <div class="project-image">
+
+                                <img
+                                    src="assets/images/rag.jpg"
+                                    alt="Enterprise RAG Knowledge Base"
+                                    loading="lazy"
+                                >
+
+                                <span class="project-number">
+                                    03
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-content">
+
+                                <div class="project-top">
+
+                                    <span class="project-type">
+                                        AI / RAG
+                                    </span>
+
+                                </div>
+
+
+                                <h4>
+                                    Enterprise RAG Knowledge Base
+                                </h4>
+
+
+                                <p>
+
+                                    An intelligent document-based
+                                    question-answering system that allows
+                                    users to upload documents and retrieve
+                                    relevant answers using RAG.
+
+                                </p>
+
+
+                                <div class="project-tech">
+
+                                    <span>Python</span>
+                                    <span>FastAPI</span>
+                                    <span>React</span>
+                                    <span>SQLite</span>
+                                    <span>PostgreSQL</span>
+                                    <span>ChromaDB</span>
+                                    <span>Gemini API</span>
+                                    <span>Docker</span>
+
+                                </div>
+
+
+                                <div class="project-actions">
+
+                                    <a
+                                        href="https://github.com/Yallanti1939/Enterprise-RAG-Knowledge-Base"
+                                        class="project-link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+
+                                        GitHub Link
+
+                                        <span>
+                                            ↗
+                                        </span>
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- =========================================
+                             SENTIMENT ANALYSIS
+                        ========================================== -->
+
+                        <article class="project-card">
+
+                            <div class="project-image">
+
+                                <img
+                                    src="assets/images/sentiment.jpg"
+                                    alt="AI Powered Sentiment Analysis System"
+                                    loading="lazy"
+                                >
+
+                                <span class="project-number">
+                                    04
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-content">
+
+                                <div class="project-top">
+
+                                    <span class="project-type">
+                                        Machine Learning
+                                    </span>
+
+                                </div>
+
+
+                                <h4>
+                                    AI-Powered Sentiment Analysis System
+                                </h4>
+
+
+                                <p>
+
+                                    A machine learning system that analyzes
+                                    user feedback and predicts sentiment using
+                                    natural language processing and supervised
+                                    classification techniques.
+
+                                </p>
+
+
+                                <div class="project-tech">
+
+                                    <span>Python</span>
+                                    <span>Pandas</span>
+                                    <span>NLTK</span>
+                                    <span>Scikit-learn</span>
+                                    <span>TF-IDF</span>
+                                    <span>Logistic Regression</span>
+                                    <span>SVM</span>
+                                    <span>Streamlit</span>
+
+                                </div>
+
+
+                                <div class="project-actions">
+
+                                    <a
+                                        href="https://github.com/Yallanti1939/AI-Powered-Sentiment-Analysis-System"
+                                        class="project-link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+
+                                        GitHub Link
+
+                                        <span>
+                                            ↗
+                                        </span>
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =================================================
+                     CATEGORY 03 — DATA ANALYTICS
+                ================================================== -->
+
+                <div class="project-category">
+
+
+                    <!-- Category Header -->
+
+                    <div class="project-category-header">
+
+                        <div>
+
+                            <span class="project-category-number">
+                                03
+                            </span>
+
+                            <h3>
+                                Data Analytics
+                            </h3>
+
+                        </div>
+
+                        <p>
+
+                            Turning data into meaningful
+                            insights and decisions.
+
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- Projects Grid -->
+
+                    <div class="projects-grid">
+
+
+                        <!-- =========================================
+                             RETAIL
+                        ========================================== -->
+
+                        <article class="project-card">
+
+                            <div class="project-image">
+
+                                <img
+                                    src="assets/images/retail-analysis.png"
+                                    alt="Retail Sales Analysis"
+                                    loading="lazy"
+                                >
+
+                                <span class="project-number">
+                                    05
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-content">
+
+                                <div class="project-top">
+
+                                    <span class="project-type">
+                                        Data Analytics
+                                    </span>
+
+                                </div>
+
+
+                                <h4>
+                                    Retail Sales Analysis & Reporting
+                                </h4>
+
+
+                                <p>
+
+                                    An analytical reporting solution for a
+                                    retail chain that explores sales data,
+                                    identifies trends and presents actionable
+                                    business insights.
+
+                                </p>
+
+
+                                <div class="project-tech">
+
+                                    <span>Python</span>
+                                    <span>SQL</span>
+                                    <span>MySQL</span>
+                                    <span>Excel</span>
+                                    <span>Streamlit</span>
+                                    <span>Jupyter</span>
+
+                                </div>
+
+
+                                <div class="project-actions">
+
+                                    <a
+                                        href="https://github.com/Yallanti1939/Retail-Sales-Data-Analysis"
+                                        class="project-link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+
+                                        GitHub Link
+
+                                        <span>
+                                            ↗
+                                        </span>
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- =========================================
+                             E-COMMERCE
+                        ========================================== -->
+
+                        <article class="project-card">
+
+                            <div class="project-image">
+
+                                <img
+                                    src="assets/images/ecommerce.jpg"
+                                    alt="Indian Ecommerce Analysis"
+                                    loading="lazy"
+                                >
+
+                                <span class="project-number">
+                                    06
+                                </span>
+
+                            </div>
+
+
+                            <div class="project-content">
+
+                                <div class="project-top">
+
+                                    <span class="project-type">
+                                        Data Science
+                                    </span>
+
+                                </div>
+
+
+                                <h4>
+                                    Indian E-Commerce Analysis
+                                </h4>
+
+
+                                <p>
+
+                                    An exploratory analysis of Indian
+                                    e-commerce data to identify patterns,
+                                    trends and useful insights using
+                                    statistical and machine learning tools.
+
+                                </p>
+
+
+                                <div class="project-tech">
+
+                                    <span>Python</span>
+                                    <span>Pandas</span>
+                                    <span>NumPy</span>
+                                    <span>Matplotlib</span>
+                                    <span>Scikit-learn</span>
+                                    <span>Statsmodels</span>
+
+                                </div>
+
+
+                                <div class="project-actions">
+
+                                    <a
+                                        href="https://github.com/Yallanti1939/Indian-Ecommerce-Analysis"
+                                        class="project-link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+
+                                        GitHub Link
+
+                                        <span>
+                                            ↗
+                                        </span>
+
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </article>
 
                     </div>
 
@@ -1338,227 +1667,524 @@
 
             </div>
 
-
-            <!-- CONTACT FORM -->
-            <div class="contact-form-wrapper">
-
-                <form
-                    id="contact-form"
-                    class="contact-form"
-                >
-
-                    <div class="form-group">
-
-                        <label for="name">
-                            Name
-                        </label>
-
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            placeholder="Your name"
-                            required
-                        >
-
-                    </div>
+        </section>
 
 
-                    <div class="form-group">
 
-                        <label for="email">
-                            Email
-                        </label>
+        <!-- =================================================
+             CONTACT SECTION
+        ================================================== -->
 
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="you@example.com"
-                            required
-                        >
+        <section
+            id="contact"
+            class="contact"
+        >
 
-                    </div>
+            <div class="contact-container">
 
 
-                    <div class="form-group">
+                <!-- =============================================
+                     CONTACT HEADER
+                ============================================== -->
 
-                        <label for="message">
-                            Message
-                        </label>
+                <div class="section-header">
 
-                        <textarea
-                            id="message"
-                            name="message"
-                            rows="6"
-                            placeholder="Tell me about your project..."
-                            required
-                        ></textarea>
+                    <span class="section-label">
+                        Contact
+                    </span>
 
-                    </div>
+                    <h2 class="section-title">
 
-
-                    <button
-                        type="submit"
-                        class="contact-submit"
-                    >
-
-                        Send Message
+                        Let's build
 
                         <span>
-                            ↗
+                            something.
                         </span>
 
-                    </button>
+                    </h2>
 
-                </form>
+                    <p class="section-subtitle">
+
+                        Have an idea, opportunity or project in mind?
+                        I'd love to hear from you.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- =============================================
+                     CONTACT CONTENT
+                ============================================== -->
+
+                <div class="contact-content">
+
+
+                    <!-- =========================================
+                         CONTACT INFORMATION
+                    ========================================== -->
+
+                    <div class="contact-info">
+
+
+                        <span class="contact-small-title">
+                            GET IN TOUCH
+                        </span>
+
+
+                        <h3>
+
+                            Let's start a
+
+                            <span>
+                                conversation.
+                            </span>
+
+                        </h3>
+
+
+                        <p class="contact-description">
+
+                            Whether you have a project idea,
+                            a job opportunity, or simply want
+                            to connect, feel free to reach out.
+
+                        </p>
+
+
+
+                        <!-- =====================================
+                             EMAIL
+                        ====================================== -->
+
+                        <a
+                            href="mailto:venkatasai.yallanti@gmail.com"
+                            class="contact-item"
+                        >
+
+                            <div class="contact-icon">
+
+                                <i class="fa-solid fa-envelope"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Email
+                                </span>
+
+                                <strong>
+                                    venkatasai.yallanti@gmail.com
+                                </strong>
+
+                            </div>
+
+                        </a>
+
+
+
+                        <!-- =====================================
+                             PHONE
+                        ====================================== -->
+
+                        <a
+                            href="tel:+919110399191"
+                            class="contact-item"
+                        >
+
+                            <div class="contact-icon">
+
+                                <i class="fa-solid fa-phone"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Phone
+                                </span>
+
+                                <strong>
+                                    +91 91103 99191
+                                </strong>
+
+                            </div>
+
+                        </a>
+
+
+
+                        <!-- =====================================
+                             CURRENT LOCATION
+                        ====================================== -->
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Current Location
+                                </span>
+
+                                <strong>
+                                    Hyderabad, Telangana, India
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- =====================================
+                             PERMANENT LOCATION
+                        ====================================== -->
+
+                        <div class="contact-item">
+
+                            <div class="contact-icon">
+
+                                <i class="fa-solid fa-map-marker-alt"></i>
+
+                            </div>
+
+                            <div>
+
+                                <span>
+                                    Permanent Location
+                                </span>
+
+                                <strong>
+                                    Nellore, Andhra Pradesh, India
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =========================================
+                         CONTACT FORM
+                    ========================================== -->
+
+                    <div class="contact-form-wrapper">
+
+                        <form
+                            id="contact-form"
+                            class="contact-form"
+                        >
+
+
+                            <!-- Name -->
+
+                            <div class="form-group">
+
+                                <label for="name">
+                                    Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    placeholder="Your name"
+                                    autocomplete="name"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <!-- Email -->
+
+                            <div class="form-group">
+
+                                <label for="email">
+                                    Email
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="you@example.com"
+                                    autocomplete="email"
+                                    required
+                                >
+
+                            </div>
+
+
+
+                            <!-- Message -->
+
+                            <div class="form-group">
+
+                                <label for="message">
+                                    Message
+                                </label>
+
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="6"
+                                    placeholder="Tell me about your project..."
+                                    required
+                                ></textarea>
+
+                            </div>
+
+
+
+                            <!-- Submit -->
+
+                            <button
+                                type="submit"
+                                class="contact-submit"
+                            >
+
+                                Send Message
+
+                                <span>
+                                    ↗
+                                </span>
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+                </div>
 
             </div>
-
-        </div>
-
-    </div>
 
         </section>
 
     </main>
 
 
-    <!-- Footer -->
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
     <footer class="footer">
 
-    <div class="footer-container">
+        <div class="footer-container">
 
-        <!-- FOOTER TOP -->
-        <div class="footer-top">
 
-            <!-- BRAND -->
-            <div class="footer-brand">
+            <!-- =================================================
+                 FOOTER TOP
+            ================================================== -->
 
-                <a href="#home" class="footer-logo">
+            <div class="footer-top">
 
-                    <img
-                        src="assets/images/logo.png"
-                        alt="TY Logo"
-                        class="footer-logo-image"
+
+                <!-- =============================================
+                     FOOTER BRAND
+                ============================================== -->
+
+                <div class="footer-brand">
+
+                    <a
+                        href="#home"
+                        class="footer-logo"
                     >
 
-                    <span>
-                        YALLANTI VENKATA SAI TEJA
+                        <img
+                            src="assets/logo/ty-logo.png"
+                            alt="TY Logo"
+                            class="footer-logo-image"
+                        >
+
+                        <span>
+                            YALLANTI VENKATA SAI TEJA
+                        </span>
+
+                    </a>
+
+
+                    <p>
+
+                        Software Developer · Full Stack Developer
+                        · AI Engineer · Data Analyst
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- =============================================
+                     FOOTER NAVIGATION
+                ============================================== -->
+
+                <div class="footer-navigation">
+
+                    <span class="footer-heading">
+                        Navigation
                     </span>
 
-                </a>
 
-                <p>
-                    Software Developer · Full Stack Developer
-                    · AI Engineer · Data Analyst
-                </p>
+                    <div class="footer-links">
 
-            </div>
+                        <a href="#home">
+                            Home
+                        </a>
+
+                        <a href="#about">
+                            About
+                        </a>
+
+                        <a href="#education">
+                            Education
+                        </a>
+
+                        <a href="#experience">
+                            Experience
+                        </a>
+
+                        <a href="#projects">
+                            Projects
+                        </a>
+
+                        <a href="#contact">
+                            Contact
+                        </a>
+
+                    </div>
+
+                </div>
 
 
-            <!-- FOOTER NAVIGATION -->
-            <div class="footer-navigation">
 
-                <span class="footer-heading">
-                    Navigation
-                </span>
+                <!-- =============================================
+                     FOOTER SOCIAL MEDIA
+                ============================================== -->
 
-                <div class="footer-links">
+                <div class="footer-connect">
 
-                    <a href="#home">
-                        Home
-                    </a>
+                    <span class="footer-heading">
+                        Connect
+                    </span>
 
-                    <a href="#about">
-                        About
-                    </a>
 
-                    <a href="#education">
-                        Education
-                    </a>
+                    <div class="footer-socials">
 
-                    <a href="#experience">
-                        Experience
-                    </a>
 
-                    <a href="#projects">
-                        Projects
-                    </a>
+                        <!-- GitHub -->
 
-                    <a href="#contact">
-                        Contact
-                    </a>
+                        <a
+                            href="https://github.com/Yallanti1939"
+                            class="footer-social-icon"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="GitHub"
+                            title="GitHub"
+                        >
+
+                            <i class="fa-brands fa-github"></i>
+
+                        </a>
+
+
+                        <!-- LinkedIn -->
+
+                        <a
+                            href="https://www.linkedin.com/in/yallanti1939/"
+                            class="footer-social-icon"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="LinkedIn"
+                            title="LinkedIn"
+                        >
+
+                            <i class="fa-brands fa-linkedin-in"></i>
+
+                        </a>
+
+
+                        <!-- Email -->
+
+                        <a
+                            href="mailto:venkatasai.yallanti@gmail.com"
+                            class="footer-social-icon"
+                            aria-label="Email"
+                            title="Email"
+                        >
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                        </a>
+
+                    </div>
 
                 </div>
 
             </div>
 
 
-            <!-- FOOTER CONNECT -->
-            <div class="footer-connect">
 
-                <span class="footer-heading">
-                    Connect
-                </span>
+            <!-- =================================================
+                 FOOTER BOTTOM
+            ================================================== -->
 
-                <div class="footer-socials">
+            <div class="footer-bottom">
 
-                <a
-                    href="https://github.com/Yallanti1939"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="footer-social-icon"
-                    aria-label="GitHub"
-                >
-                    <i class="fa-brands fa-github"></i>
-                </a>
+                <p>
 
-                <a
-                    href="https://www.linkedin.com/in/yallanti1939/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="footer-social-icon"
-                    aria-label="LinkedIn"
-                >
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
+                    ©
+                    <span id="current-year">
+                        2026
+                    </span>
+
+                    Yallanti Venkata Sai Teja.
+                    All rights reserved.
+
+                </p>
+
 
                 <a
-                    href="mailto:venkatasai.yallanti@gmail.com"
-                    class="footer-social-icon"
-                    aria-label="Email"
+                    href="#home"
+                    class="back-to-top"
                 >
-                    <i class="fa-solid fa-envelope"></i>
+
+                    Back to top
+
+                    <span>
+                        ↑
+                    </span>
+
                 </a>
 
             </div>
 
-            </div>
-
         </div>
-
-
-        <!-- FOOTER BOTTOM -->
-        <div class="footer-bottom">
-
-            <p>
-                © 2026 Yallanti Venkata Sai Teja.
-                All rights reserved.
-            </p>
-
-            <a href="#home" class="back-to-top">
-                Back to top
-                <span>↑</span>
-            </a>
-
-        </div>
-
-    </div>
 
     </footer>
 
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
     <script src="js/script.js"></script>
 
+
 </body>
+
 </html>

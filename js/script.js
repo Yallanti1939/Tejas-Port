@@ -1,14 +1,184 @@
 /* =========================================================
-   NAVBAR ACTIVE LINK + SMOOTH SECTION SCROLL
+   PORTFOLIO WEBSITE - COMPLETE JAVASCRIPT
 ========================================================= */
-
-const navLinks = document.querySelectorAll(".nav-link");
-const sections = document.querySelectorAll("section[id]");
-const header = document.querySelector(".header");
 
 
 /* =========================================================
-   SET ACTIVE NAVBAR LINK
+   1. SELECT ELEMENTS
+========================================================= */
+
+const navbar = document.querySelector(".navbar");
+
+const navLinks =
+    document.querySelectorAll(".nav-link");
+
+const sections =
+    document.querySelectorAll("section[id]");
+
+const mobileMenuBtn =
+    document.querySelector("#mobile-menu-btn");
+
+const navLinksContainer =
+    document.querySelector("#nav-links");
+
+const themeToggle =
+    document.querySelector("#theme-toggle");
+
+const themeIcon =
+    document.querySelector("#theme-icon");
+
+const backToTop =
+    document.querySelector(".back-to-top");
+
+const contactForm =
+    document.querySelector("#contact-form");
+
+
+/* =========================================================
+   2. GET NAVBAR HEIGHT
+========================================================= */
+
+function getNavbarHeight() {
+
+    if (!navbar) {
+        return 0;
+    }
+
+    return navbar.offsetHeight;
+}
+
+
+/* =========================================================
+   3. MOBILE MENU
+========================================================= */
+
+function openMobileMenu() {
+
+    if (!navLinksContainer) {
+        return;
+    }
+
+    navLinksContainer.classList.add("mobile-open");
+
+    if (mobileMenuBtn) {
+
+        mobileMenuBtn.classList.add("active");
+
+        mobileMenuBtn.setAttribute(
+            "aria-expanded",
+            "true"
+        );
+
+        mobileMenuBtn.setAttribute(
+            "aria-label",
+            "Close navigation menu"
+        );
+
+        const icon =
+            mobileMenuBtn.querySelector("i");
+
+        if (icon) {
+
+            icon.classList.remove(
+                "fa-bars"
+            );
+
+            icon.classList.add(
+                "fa-xmark"
+            );
+
+        }
+    }
+}
+
+
+function closeMobileMenu() {
+
+    if (!navLinksContainer) {
+        return;
+    }
+
+    navLinksContainer.classList.remove("mobile-open");
+
+    if (mobileMenuBtn) {
+
+        mobileMenuBtn.classList.remove("active");
+
+        mobileMenuBtn.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        mobileMenuBtn.setAttribute(
+            "aria-label",
+            "Open navigation menu"
+        );
+
+        const icon =
+            mobileMenuBtn.querySelector("i");
+
+        if (icon) {
+
+            icon.classList.remove(
+                "fa-xmark"
+            );
+
+            icon.classList.add(
+                "fa-bars"
+            );
+
+        }
+    }
+}
+
+
+function toggleMobileMenu() {
+
+    if (!navLinksContainer) {
+        return;
+    }
+
+    const menuIsOpen =
+        navLinksContainer.classList.contains(
+            "mobile-open"
+        );
+
+    if (menuIsOpen) {
+
+        closeMobileMenu();
+
+    } else {
+
+        openMobileMenu();
+
+    }
+}
+
+
+/* =========================================================
+   4. MOBILE MENU BUTTON CLICK
+========================================================= */
+
+if (mobileMenuBtn) {
+
+    mobileMenuBtn.addEventListener(
+        "click",
+        event => {
+
+            event.preventDefault();
+
+            event.stopPropagation();
+
+            toggleMobileMenu();
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   5. SET ACTIVE NAVIGATION LINK
 ========================================================= */
 
 function setActiveLink(sectionId) {
@@ -17,10 +187,16 @@ function setActiveLink(sectionId) {
 
         link.classList.remove("active");
 
+        const href =
+            link.getAttribute("href");
+
         if (
-            link.getAttribute("href") === `#${sectionId}`
+            href ===
+            `#${sectionId}`
         ) {
+
             link.classList.add("active");
+
         }
 
     });
@@ -29,106 +205,104 @@ function setActiveLink(sectionId) {
 
 
 /* =========================================================
-   NAVBAR CLICK
+   6. NAVIGATION LINK CLICK
 ========================================================= */
 
 navLinks.forEach(link => {
 
-    link.addEventListener("click", event => {
+    link.addEventListener(
+        "click",
+        event => {
 
-        const targetId =
-            link.getAttribute("href");
+            const targetId =
+                link.getAttribute("href");
 
-        /*
-         * Only handle internal section links
-         */
-        if (
-            !targetId ||
-            !targetId.startsWith("#")
-        ) {
-            return;
+
+            if (
+                !targetId ||
+                !targetId.startsWith("#")
+            ) {
+
+                return;
+
+            }
+
+
+            const targetSection =
+                document.querySelector(
+                    targetId
+                );
+
+
+            if (!targetSection) {
+                return;
+            }
+
+
+            event.preventDefault();
+
+
+            /* -----------------------------------------
+               Set active link immediately
+            ----------------------------------------- */
+
+            const sectionId =
+                targetId.substring(1);
+
+            setActiveLink(sectionId);
+
+
+            /* -----------------------------------------
+               Calculate scroll position
+            ----------------------------------------- */
+
+            const navbarHeight =
+                getNavbarHeight();
+
+            const extraSpace = 20;
+
+            const targetPosition =
+                targetSection.getBoundingClientRect().top +
+                window.scrollY -
+                navbarHeight -
+                extraSpace;
+
+
+            /* -----------------------------------------
+               Smooth scroll
+            ----------------------------------------- */
+
+            window.scrollTo({
+
+                top: targetPosition,
+
+                behavior: "smooth"
+
+            });
+
+
+            /* -----------------------------------------
+               Close mobile menu
+            ----------------------------------------- */
+
+            closeMobileMenu();
+
         }
-
-        const targetSection =
-            document.querySelector(targetId);
-
-        if (!targetSection) {
-            return;
-        }
-
-        /*
-         * Prevent the browser's default jump
-         */
-        event.preventDefault();
-
-
-        /*
-         * Get fixed navbar height
-         */
-        const headerHeight =
-            header ? header.offsetHeight : 0;
-
-
-        /*
-         * Calculate section position
-         *
-         * headerHeight
-         *      ↓
-         * Fixed navbar space
-         *
-         * 30px
-         *      ↓
-         * Extra breathing space
-         */
-        const sectionPosition =
-            targetSection.getBoundingClientRect().top +
-            window.scrollY -
-            headerHeight -
-            30;
-
-
-        /*
-         * Smooth scroll
-         */
-        window.scrollTo({
-
-            top: Math.max(sectionPosition, 0),
-
-            behavior: "smooth"
-
-        });
-
-
-        /*
-         * Immediately make clicked
-         * navbar link active
-         */
-        setActiveLink(
-            targetSection.id
-        );
-
-    });
+    );
 
 });
 
 
 /* =========================================================
-   ACTIVE NAVBAR WHILE SCROLLING
+   7. ACTIVE NAVIGATION WHILE SCROLLING
 ========================================================= */
 
-window.addEventListener("scroll", () => {
+function updateActiveSection() {
 
     let currentSection = "";
 
-    /*
-     * Position where a section becomes active
-     *
-     * This takes the fixed navbar into account.
-     */
-    const scrollPosition =
-        window.scrollY +
-        (header ? header.offsetHeight : 0) +
-        50;
+    const navbarHeight =
+        getNavbarHeight();
 
 
     sections.forEach(section => {
@@ -136,14 +310,15 @@ window.addEventListener("scroll", () => {
         const sectionTop =
             section.offsetTop;
 
-        const sectionBottom =
-            sectionTop +
+        const sectionHeight =
             section.offsetHeight;
 
 
         if (
-            scrollPosition >= sectionTop &&
-            scrollPosition < sectionBottom
+            window.scrollY >=
+            sectionTop -
+            navbarHeight -
+            150
         ) {
 
             currentSection =
@@ -154,21 +329,13 @@ window.addEventListener("scroll", () => {
     });
 
 
-    /*
-     * Special case:
-     * At the very top, Home should be active.
-     */
+    /* -----------------------------------------
+       Home at very top
+    ----------------------------------------- */
+
     if (window.scrollY < 100) {
 
-        const homeSection =
-            document.querySelector("#home");
-
-        if (homeSection) {
-
-            currentSection =
-                "home";
-
-        }
+        currentSection = "home";
 
     }
 
@@ -181,31 +348,100 @@ window.addEventListener("scroll", () => {
 
     }
 
-});
+}
 
 
 /* =========================================================
-   DARK / LIGHT MODE
+   8. SCROLL EVENT
 ========================================================= */
 
-const themeToggle =
-    document.querySelector("#theme-toggle");
-
-const themeIcon =
-    document.querySelector("#theme-icon");
+window.addEventListener(
+    "scroll",
+    updateActiveSection
+);
 
 
 /* =========================================================
-   GET SAVED THEME
+   9. INITIAL ACTIVE LINK
+========================================================= */
+
+window.addEventListener(
+    "load",
+    () => {
+
+        updateActiveSection();
+
+    }
+);
+
+
+/* =========================================================
+   10. CLOSE MENU WHEN CLICKING OUTSIDE
+========================================================= */
+
+document.addEventListener(
+    "click",
+    event => {
+
+        if (
+            !navLinksContainer ||
+            !mobileMenuBtn
+        ) {
+
+            return;
+
+        }
+
+
+        const clickedInsideMenu =
+            navLinksContainer.contains(
+                event.target
+            );
+
+        const clickedMenuButton =
+            mobileMenuBtn.contains(
+                event.target
+            );
+
+
+        if (
+            !clickedInsideMenu &&
+            !clickedMenuButton
+        ) {
+
+            closeMobileMenu();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   11. CLOSE MOBILE MENU ON DESKTOP
+========================================================= */
+
+window.addEventListener(
+    "resize",
+    () => {
+
+        if (window.innerWidth > 768) {
+
+            closeMobileMenu();
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   12. DARK / LIGHT MODE
 ========================================================= */
 
 const savedTheme =
     localStorage.getItem("theme");
 
-
-/* =========================================================
-   APPLY SAVED THEME
-========================================================= */
 
 if (savedTheme === "dark") {
 
@@ -213,43 +449,122 @@ if (savedTheme === "dark") {
         "dark-mode"
     );
 
-    if (themeIcon) {
-
-        themeIcon.textContent =
-            "☀";
-
-    }
-
 } else {
 
     document.body.classList.remove(
         "dark-mode"
     );
 
-    if (themeIcon) {
+}
 
-        themeIcon.textContent =
-            "☾";
+
+/* =========================================================
+   13. UPDATE THEME ICON
+========================================================= */
+
+function updateThemeIcon() {
+
+    if (!themeIcon) {
+        return;
+    }
+
+
+    const isDark =
+        document.body.classList.contains(
+            "dark-mode"
+        );
+
+
+    /*
+       Font Awesome icon
+    */
+
+    if (
+        themeIcon.tagName === "I"
+    ) {
+
+        themeIcon.classList.remove(
+            "fa-sun",
+            "fa-moon"
+        );
+
+        themeIcon.classList.add(
+            isDark
+                ? "fa-sun"
+                : "fa-moon"
+        );
+
+        return;
 
     }
+
+
+    /*
+       If icon is inside another element
+    */
+
+    const icon =
+        themeIcon.querySelector("i");
+
+
+    if (icon) {
+
+        icon.classList.remove(
+            "fa-sun",
+            "fa-moon"
+        );
+
+        icon.classList.add(
+            isDark
+                ? "fa-sun"
+                : "fa-moon"
+        );
+
+        return;
+
+    }
+
+
+    /*
+       Text fallback
+    */
+
+    themeIcon.textContent =
+        isDark
+            ? "☀"
+            : "☾";
 
 }
 
 
 /* =========================================================
-   THEME TOGGLE
+   14. INITIAL THEME ICON
+========================================================= */
+
+updateThemeIcon();
+
+
+/* =========================================================
+   15. THEME TOGGLE
 ========================================================= */
 
 if (themeToggle) {
 
     themeToggle.addEventListener(
         "click",
-        () => {
+        event => {
+
+            event.preventDefault();
+
+
+            /* Toggle dark mode */
 
             document.body.classList.toggle(
                 "dark-mode"
             );
 
+
+            /* Check current mode */
 
             const isDark =
                 document.body.classList.contains(
@@ -257,25 +572,18 @@ if (themeToggle) {
                 );
 
 
-            /*
-             * Change icon
-             */
+            /* Update icon */
 
-            if (themeIcon) {
-
-                themeIcon.textContent =
-                    isDark ? "☀" : "☾";
-
-            }
+            updateThemeIcon();
 
 
-            /*
-             * Save theme preference
-             */
+            /* Save preference */
 
             localStorage.setItem(
                 "theme",
-                isDark ? "dark" : "light"
+                isDark
+                    ? "dark"
+                    : "light"
             );
 
         }
@@ -285,14 +593,8 @@ if (themeToggle) {
 
 
 /* =========================================================
-   BACK TO TOP
+   16. BACK TO TOP
 ========================================================= */
-
-const backToTop =
-    document.querySelector(
-        ".back-to-top"
-    );
-
 
 if (backToTop) {
 
@@ -311,13 +613,6 @@ if (backToTop) {
 
             });
 
-
-            /*
-             * Make Home active
-             */
-
-            setActiveLink("home");
-
         }
     );
 
@@ -325,14 +620,113 @@ if (backToTop) {
 
 
 /* =========================================================
-   CONTACT FORM
+   17. SHOW / HIDE BACK TO TOP
 ========================================================= */
 
-const contactForm =
-    document.querySelector(
-        "#contact-form"
+window.addEventListener(
+    "scroll",
+    () => {
+
+        if (!backToTop) {
+            return;
+        }
+
+
+        if (window.scrollY > 500) {
+
+            backToTop.classList.add(
+                "show"
+            );
+
+        } else {
+
+            backToTop.classList.remove(
+                "show"
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================================
+   18. HIRE ME BUTTON
+========================================================= */
+
+const hireButtons =
+    document.querySelectorAll(
+        ".hire-btn"
     );
 
+
+hireButtons.forEach(button => {
+
+    button.addEventListener(
+        "click",
+        event => {
+
+            const href =
+                button.getAttribute("href");
+
+
+            if (
+                !href ||
+                !href.startsWith("#")
+            ) {
+
+                return;
+
+            }
+
+
+            const target =
+                document.querySelector(
+                    href
+                );
+
+
+            if (!target) {
+                return;
+            }
+
+
+            event.preventDefault();
+
+
+            const navbarHeight =
+                getNavbarHeight();
+
+            const extraSpace = 20;
+
+
+            const targetPosition =
+                target.getBoundingClientRect().top +
+                window.scrollY -
+                navbarHeight -
+                extraSpace;
+
+
+            window.scrollTo({
+
+                top: targetPosition,
+
+                behavior: "smooth"
+
+            });
+
+
+            closeMobileMenu();
+
+        }
+    );
+
+});
+
+
+/* =========================================================
+   19. CONTACT FORM
+========================================================= */
 
 if (contactForm) {
 
@@ -344,29 +738,26 @@ if (contactForm) {
 
 
             const name =
-                document
-                    .querySelector("#name")
-                    .value
-                    .trim();
+                document.querySelector(
+                    "#name"
+                )?.value.trim();
 
 
             const email =
-                document
-                    .querySelector("#email")
-                    .value
-                    .trim();
+                document.querySelector(
+                    "#email"
+                )?.value.trim();
 
 
             const message =
-                document
-                    .querySelector("#message")
-                    .value
-                    .trim();
+                document.querySelector(
+                    "#message"
+                )?.value.trim();
 
 
-            /*
-             * Validate fields
-             */
+            /* -----------------------------------------
+               Validation
+            ----------------------------------------- */
 
             if (
                 !name ||
@@ -383,9 +774,9 @@ if (contactForm) {
             }
 
 
-            /*
-             * Email subject
-             */
+            /* -----------------------------------------
+               Email subject
+            ----------------------------------------- */
 
             const subject =
                 encodeURIComponent(
@@ -393,9 +784,9 @@ if (contactForm) {
                 );
 
 
-            /*
-             * Email body
-             */
+            /* -----------------------------------------
+               Email body
+            ----------------------------------------- */
 
             const body =
                 encodeURIComponent(
@@ -409,13 +800,14 @@ if (contactForm) {
                 );
 
 
-            /*
-             * Open user's email client
-             */
+            /* -----------------------------------------
+               Open email
+            ----------------------------------------- */
 
             window.location.href =
                 `mailto:venkatasai.yallanti@gmail.com` +
-                `?subject=${subject}&body=${body}`;
+                `?subject=${subject}` +
+                `&body=${body}`;
 
         }
     );
@@ -424,65 +816,58 @@ if (contactForm) {
 
 
 /* =========================================================
-   SCROLL REVEAL
+   20. SCROLL REVEAL
 ========================================================= */
 
 const revealElements =
     document.querySelectorAll(
 
         ".about-card, " +
-
         ".education-item, " +
-
         ".experience-card, " +
-
         ".project-card, " +
-
         ".contact-info, " +
-
-        ".contact-form-wrapper"
+        ".contact-form-wrapper, " +
+        ".skill-card"
 
     );
 
 
-/*
- * Check whether browser supports
- * IntersectionObserver
- */
+/* =========================================================
+   21. INTERSECTION OBSERVER
+========================================================= */
 
-if ("IntersectionObserver" in window) {
+if (
+    "IntersectionObserver" in window
+) {
 
     const revealObserver =
         new IntersectionObserver(
 
             entries => {
 
-                entries.forEach(entry => {
+                entries.forEach(
+                    entry => {
 
-                    if (
-                        entry.isIntersecting
-                    ) {
+                        if (
+                            entry.isIntersecting
+                        ) {
 
-                        entry.target.classList.add(
-                            "show"
-                        );
+                            entry.target.classList.add(
+                                "show"
+                            );
 
 
-                        /*
-                         * Stop observing once
-                         * animation has happened
-                         */
+                            revealObserver.unobserve(
+                                entry.target
+                            );
 
-                        revealObserver.unobserve(
-                            entry.target
-                        );
+                        }
 
                     }
-
-                });
+                );
 
             },
-
             {
                 threshold: 0.12
             }
@@ -490,37 +875,42 @@ if ("IntersectionObserver" in window) {
         );
 
 
-    revealElements.forEach(element => {
+    revealElements.forEach(
+        element => {
 
-        element.classList.add(
-            "reveal"
-        );
+            element.classList.add(
+                "reveal"
+            );
 
-        revealObserver.observe(
-            element
-        );
 
-    });
+            revealObserver.observe(
+                element
+            );
+
+        }
+    );
 
 } else {
 
     /*
-     * Fallback for older browsers
-     */
+       Fallback for older browsers
+    */
 
-    revealElements.forEach(element => {
+    revealElements.forEach(
+        element => {
 
-        element.classList.add(
-            "show"
-        );
+            element.classList.add(
+                "show"
+            );
 
-    });
+        }
+    );
 
 }
 
 
 /* =========================================================
-   CURRENT YEAR
+   22. CURRENT YEAR
 ========================================================= */
 
 const currentYear =
@@ -535,3 +925,27 @@ if (currentYear) {
         new Date().getFullYear();
 
 }
+
+
+/* =========================================================
+   23. INITIALIZE
+========================================================= */
+
+window.addEventListener(
+    "load",
+    () => {
+
+        closeMobileMenu();
+
+        updateThemeIcon();
+
+        updateActiveSection();
+
+    }
+);
+
+
+
+/* =========================================================
+   END OF SCRIPT
+========================================================= */
